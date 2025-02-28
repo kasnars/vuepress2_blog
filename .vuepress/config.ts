@@ -4,17 +4,17 @@ import { viteBundler } from '@vuepress/bundler-vite'
 import { webpackBundler } from '@vuepress/bundler-webpack'
 
 export default defineUserConfig({
-  title: "Blog By Kasnars",
-  description: "Just playing around",
+  title: "个人知识库",
+  description: "个人整理markdown知识库，包含知识点，面经与解决方案",
   bundler: viteBundler(),
   // bundler: webpackBundler(),
   theme: recoTheme({
-    logo: "/logo.png",
+    logo: "/newlogo.jpg",
     author: "Kasnars",
-    authorAvatar: "/head.png",
-    docsRepo: "https://github.com/vuepress-reco/vuepress-theme-reco-next",
-    docsBranch: "main",
-    docsDir: "example",
+    authorAvatar: "/newhead.jpg",
+    // docsRepo: "https://github.com/vuepress-reco/vuepress-theme-reco-next",
+    // docsBranch: "main",
+    docsDir: "docs",
     lastUpdatedText: "",
     // series 为原 sidebar
     series: {
@@ -52,12 +52,17 @@ export default defineUserConfig({
         "icon": "reco-home"
       },
       {
-        "text": "时间轴",
-        "link": "/timeline/",
+        "text": "博客",
+        "link": "/posts.html",
         "icon": "reco-date"
       },
       {
-        "text": "文档",
+        "text": "时间轴",
+        "link": "/timeline.html",
+        "icon": "reco-date"
+      },
+      {
+        "text": "知识点",
         "icon": "reco-message",
         "children": [
           {
@@ -74,8 +79,9 @@ export default defineUserConfig({
           }
         ]
       },
+
       {
-        "text": "链接",
+        "text": "外部链接",
         "icon": "reco-message",
         "children": [
           {
@@ -89,7 +95,8 @@ export default defineUserConfig({
             "icon": "reco-juejin"
           }
         ]
-      }
+      },
+
     ],
     // bulletin: {
     //   body: [
@@ -145,19 +152,19 @@ export default defineUserConfig({
     //     },
     //   ],
     // },
-    // commentConfig: {
-    //   type: 'valine',
-    //   // options 与 1.x 的 valineConfig 配置一致
-    //   options: {
-    //     // appId: 'xxx',
-    //     // appKey: 'xxx',
-    //     // placeholder: '填写邮箱可以收到回复提醒哦！',
-    //     // verify: true, // 验证码服务
-    //     // notify: true,
-    //     // recordIP: true,
-    //     // hideComments: true // 隐藏评论
-    //   },
-    // },
+    commentConfig: {
+      type: 'valine',
+      // options 与 1.x 的 valineConfig 配置一致
+      options: {
+        appId: '7U9I2lud28rt2J3cQptUGPL3-gzGzoHsz',
+        appKey: 'Q3GItuVLrrpGxeoSOaHVNrei',
+        // placeholder: 'kasnars@163.com',
+        // verify: true, // 验证码服务
+        // notify: true,
+        // recordIP: true,
+        // hideComments: false // 隐藏评论
+      },
+    },
   }),
   // debug: true,
 });
