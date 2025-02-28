@@ -12,7 +12,7 @@ bannerBrand:
   tagline: 前端搭建采用vuepress-theme-reco 2.0 生成，内容MarkDown编写，更新时间随缘。
   buttons:
     - { text: 复习知识点, link: '/docs/knowledge/' }
-    - { text: 待分类, link: '/docs/style-default-api/introduce', type: 'plain' }
+    - { text: 查看全部博客, link: '/posts.html', type: 'plain' }
   socialLinks:
     - { icon: 'LogoGithub', link: 'https://github.com/vuepress-reco/vuepress-theme-reco' }
 blog:
