@@ -7,6 +7,22 @@ export default defineUserConfig({
   title: "个人知识库",
   description: "个人整理markdown知识库，包含知识点，面经与解决方案",
   bundler: viteBundler(),
+  head: [
+    [
+      "link",
+      {
+        "rel": "icon",
+        "href": "/favicon.ico"
+      }
+    ],
+    [
+      "meta",
+      {
+        "name": "viewport",
+        "content": "width=device-width,initial-scale=1,user-scalable=no"
+      }
+    ]
+  ],
   // bundler: webpackBundler(),
   theme: recoTheme({
     logo: "/newlogo.jpg",
