@@ -39,7 +39,8 @@ export default defineUserConfig({
         "js",
         "ts",
         "vue",
-        "react"
+        "react",
+        "uniapp"
       ],
       "/docs/computer/": [
         "computerBase",
