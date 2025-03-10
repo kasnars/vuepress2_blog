@@ -113,7 +113,11 @@ export default defineUserConfig({
           }
         ]
       },
-
+      {
+        "text": "面试记录",
+        "link": "/interview/202502",
+        "icon": "reco-date"
+      },
     ],
     // bulletin: {
     //   body: [
