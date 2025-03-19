@@ -8,23 +8,8 @@ categories:
 ---
 
 ### 控制台打开的情况下卡死
-- 安卓12以下以及ios需要用'/staic/xxx/xxx.png'的方式寻找
-- 而安卓12需要通过'../../xxxx.png'相对路径的方式寻找
-#### 解决方法
-```js
-onLoad(){
-    try {
-    const res = uni.getSystemInfoSync();
-        this.systemVer = res.system
-        this.systemPlat = res.platform
-    } catch (e) {
-        // error
-    }
-}
+在测试环境中，打开控制台不久，就会逐渐卡死，内存泄漏  
 
-// methods
-iconPathCompatible(path){
-	return this.systemVer >= 12 && this.systemPlat === 'android' ? `../..${path}`:path
-}
-// 在设置path的时候把'/staic/xxxxxx'用这个函数包裹返回
+```js
+主要的原因是因为console.log在不断的打印一个10m大小的数据，轮询调用打印，window下的变量没有被及时回收，导致内存泄漏卡死
 ```
