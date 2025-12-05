@@ -4,7 +4,7 @@ import { viteBundler } from '@vuepress/bundler-vite'
 import { webpackBundler } from '@vuepress/bundler-webpack'
 
 export default defineUserConfig({
-  title: "个人知识库",
+  title: "个人在线笔记",
   description: "个人整理markdown知识库，包含知识点，面经与解决方案",
   bundler: viteBundler(),
   head: [
